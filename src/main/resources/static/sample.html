@@ -1,0 +1,55 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Page</title>
+    <style>
+        /* Existing styling for the container */
+        .container {
+            padding: 20px;
+            margin: 10px;
+            border: 1px solid #ccc; /* Original border */
+        }
+
+        /* Existing button styling */
+        .button {
+            background-color: #007acc; /* Original blue color */
+            color: white;
+            font-size: 16px; /* Original font size */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="button">Click Me</button>
+    </div>
+    
+    <script>
+        // Wait for the DOM to load
+        document.addEventListener("DOMContentLoaded", function() {
+            // Select the container and the button
+            const container = document.querySelector('.container');
+            const button = document.querySelector('.button');
+
+            // Dynamically add a green border to the container
+            container.style.border = "2px solid #28a745";
+
+            // Change the button's background color and font size dynamically
+            button.style.backgroundColor = "#28a745"; // Green color
+            button.style.fontSize = "18px"; // Larger font size
+
+            // Add an event listener to change the button's background color when clicked
+            button.addEventListener("click", function() {
+                button.style.backgroundColor = "#28a745"; // Ensure stays green on click
+            });
+        });
+    </script>
+</body>
+</html>
+```
