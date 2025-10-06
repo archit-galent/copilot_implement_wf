@@ -4,53 +4,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sample Page</title>
+    <title>Simple JIRA Ticket Test</title>
     <style>
-        /* Original styles */
         body {
             font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
         }
         .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
             padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        button {
-            background-color: #007acc; /* Original blue background */
-            font-size: 16px; /* Original font size */
+        .header {
+            color: #333;
+            border-bottom: 2px solid #007acc;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .content {
+            line-height: 1.6;
+            color: #666;
+        }
+        .button {
+            background-color: #007acc;
             color: white;
-            border: none;
             padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
             cursor: pointer;
-            outline: none;
+            font-size: 16px;
         }
-        button:hover {
-            opacity: 0.9;
+        .button:hover {
+            background-color: #005a9e;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <button id="testButton">Click Me!</button>
+        <h1 class="header">Simple JIRA Ticket Test</h1>
+        <div class="content">
+            <p>This is a simple HTML file to test basic changes like:</p>
+            <ul>
+                <li>Changing button color from blue to green</li>
+                <li>Increasing font size from 16px to 18px</li>
+                <li>Adding a border to the container</li>
+            </ul>
+            <button class="button" onclick="changeColor()">Click to Change Color</button>
+        </div>
     </div>
 
     <script>
-        // Wait until the page content is loaded
-        document.addEventListener("DOMContentLoaded", function() {
-            // Select the button and container elements
-            const button = document.getElementById('testButton');
+        function changeColor() {
+            const button = document.querySelector('.button');
             const container = document.querySelector('.container');
-
-            // Change the button background color and font size
-            button.style.backgroundColor = '#28a745'; // Green background
-            button.style.fontSize = '18px'; // Larger font size
-
-            // Add a green border to the container
+            
+            // Change button color to green
+            button.style.backgroundColor = '#28a745';
+            
+            // Increase font size
+            button.style.fontSize = '18px';
+            
+            // Add border to container
             container.style.border = '2px solid #28a745';
-
-            // Add a click event listener to change the button color dynamically
-            button.addEventListener('click', function() {
-                button.style.backgroundColor = '#28a745'; // Ensure the button stays green
-            });
-        });
+            
+            alert('Changes applied! Button is now green, larger font, and container has a green border.');
+        }
     </script>
 </body>
 </html>
