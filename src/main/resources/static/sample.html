@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Page</title>
+    <style>
+        /* Existing styles */
+        #container {
+            width: 300px;
+            height: 200px;
+            margin: 50px auto;
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ccc; /* Default border */
+        }
+
+        .btn {
+            background-color: #007acc;
+            color: white;
+            font-size: 16px;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <button class="btn" id="actionButton">Click Me</button>
+    </div>
+
+    <script>
+        // Function to apply required changes via JavaScript
+        document.addEventListener("DOMContentLoaded", function () {
+            // Select elements
+            const container = document.getElementById("container");
+            const button = document.getElementById("actionButton");
+
+            // Add a green border to the container
+            container.style.border = "2px solid #28a745";
+
+            // Set up button click event listener
+            button.addEventListener("click", function () {
+                // Change button background color to green
+                button.style.backgroundColor = "#28a745";
+                
+                // Increase button font size to 18px
+                button.style.fontSize = "18px";
+            });
+        });
+    </script>
+</body>
+</html>
