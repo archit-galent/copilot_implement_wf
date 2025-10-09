@@ -1,54 +1,62 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sample Page</title>
+    <title>Loan Application</title>
     <style>
         /* Existing styles */
-        #container {
-            width: 300px;
-            height: 200px;
-            margin: 50px auto;
-            text-align: center;
-            padding: 20px;
-            border: 1px solid #ccc; /* Default border */
+        body {
+            font-family: Arial, sans-serif;
         }
 
-        .btn {
-            background-color: #007acc;
+        .container {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc; /* Original border */
+        }
+
+        button {
+            background-color: #007acc; /* Original blue color */
             color: white;
-            font-size: 16px;
+            font-size: 16px; /* Original font size */
+            padding: 10px 15px;
             border: none;
-            padding: 10px 20px;
             cursor: pointer;
+        }
+
+        button:focus {
+            outline: none;
         }
     </style>
 </head>
 <body>
-    <div id="container">
-        <button class="btn" id="actionButton">Click Me</button>
+    <div class="container" id="container">
+        <h1>Welcome to the Loan Application</h1>
+        <button id="actionButton">Submit Application</button>
     </div>
 
     <script>
-        // Function to apply required changes via JavaScript
-        document.addEventListener("DOMContentLoaded", function () {
-            // Select elements
-            const container = document.getElementById("container");
-            const button = document.getElementById("actionButton");
+        // Wait for the DOM to fully load
+        document.addEventListener('DOMContentLoaded', function () {
+            // Select the button and container via their IDs
+            const button = document.getElementById('actionButton');
+            const container = document.getElementById('container');
 
-            // Add a green border to the container
-            container.style.border = "2px solid #28a745";
+            // Add a click event listener to the button
+            button.addEventListener('click', function () {
+                // Change the button's background color to green
+                button.style.backgroundColor = '#28a745';
 
-            // Set up button click event listener
-            button.addEventListener("click", function () {
-                // Change button background color to green
-                button.style.backgroundColor = "#28a745";
-                
-                // Increase button font size to 18px
-                button.style.fontSize = "18px";
+                // Increase the button's text font size to 18px
+                button.style.fontSize = '18px';
             });
+
+            // Dynamically add a green border to the container
+            container.style.border = '2px solid #28a745';
         });
     </script>
 </body>
 </html>
+```
